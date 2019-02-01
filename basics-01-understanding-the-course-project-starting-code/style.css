@@ -1,0 +1,28 @@
+#product-overview h1 {
+  background: #ff1b68;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Anton", sans-serif;
+}
+
+.section-title {
+  color: #2ddf5c;
+  font-family: inherit;
+}
+
+h1 ~ p {
+  color: purple;
+}
+
+h1 + p {
+  color: pink;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+section > span {
+  color: blue;
+}
