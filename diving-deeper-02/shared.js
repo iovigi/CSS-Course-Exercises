@@ -5,26 +5,33 @@ var modalCloseBtn = document.querySelector(".modal__action--negative");
 var toggleBtn = document.querySelector(".toggle-button");
 var mobileNav = document.querySelector(".mobile-nav");
 
-selectPlanButtons.forEach(x => {
-  x.addEventListener("click", function() {
-    backdrop.style.display = "block";
-    modal.style.display = "block";
+if (selectPlanButtons) {
+  selectPlanButtons.forEach(x => {
+    x.addEventListener("click", function () {
+      backdrop.classList.add("open");
+      modal.classList.add("open");
+    });
   });
-});
+}
 
-backdrop.addEventListener("click", function() {
-  mobileNav.style.display = "none";
+backdrop.addEventListener("click", function () {
+  mobileNav.classList.remove("open");
   closeModal();
 });
 
-modalCloseBtn.addEventListener("click", closeModal);
-
-function closeModal() {
-  backdrop.style.display = "none";
-  modal.style.display = "none";
+if (modalCloseBtn) {
+  modalCloseBtn.addEventListener("click", closeModal);
 }
 
-toggleBtn.addEventListener("click", function() {
-  mobileNav.style.display = "block";
-  backdrop.style.display = "block";
+function closeModal() {
+  backdrop.classList.remove("open");
+
+  if (modal) {
+    modal.classList.remove("open");
+  }
+}
+
+toggleBtn.addEventListener("click", function () {
+  backdrop.classList.add("open");
+  mobileNav.classList.add("open");
 });
