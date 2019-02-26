@@ -35,6 +35,10 @@ main {
   overflow: hidden;
 }
 
+.package:hover {
+  animation: push-up 200ms ease-out forwards;
+}
+
 .package a {
   text-decoration: none;
   color: inherit;
@@ -129,5 +133,19 @@ main {
 
   #free {
     border-right: 4px solid #0e4f1f;
+  }
+}
+
+@keyframes push-up {
+  0% {
+    transform: translateY(0);
+  }
+
+  33% {
+    transform: translateY(-1.5rem);
+  }
+
+  100% {
+    transform: translateY(-1rem);
   }
 }

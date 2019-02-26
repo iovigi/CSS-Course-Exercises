@@ -1,0 +1,23 @@
+//$main-color: #521751;
+$colors: (
+  main: #521751,
+  secondary: #fa923f
+);
+$border-default: 0.05rem solid
+  map-get(
+    $map: $colors,
+    $key: main
+  );
+
+$box-size-default: border-box;
+$margin-reset: 0;
+$display: (
+  main: flex,
+  webkit-1: -webkit-box,
+  ms: -ms-flexbox,
+  webkit-2: -webkit-flex
+);
+$width-main: 90%;
+$text-align-main: center;
+$flex-direction-main: column;
+$size-default: 1rem;
